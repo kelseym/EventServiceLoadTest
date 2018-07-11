@@ -52,3 +52,32 @@ eventListing.each {event ->
 
 
 
+def loggingActionForMRScansSubscription = "{\n" +
+        "    \"name\": \"MR Scan Archive on ABC123\",\n" +
+        "    \"active\": true,\n" +
+        "    \"action-key\": \"org.nrg.xnat.eventservice.actions.EventServiceLoggingAction:org.nrg.xnat.eventservice.actions.EventServiceLoggingAction\",\n" +
+        "    \"event-filter\": {\n" +
+        "        \"event-type\": \"org.nrg.xnat.eventservice.events.ScanEvent\",\n" +
+        "    \"project-ids\": [\n" +
+        "      \"ABC123\"\n" +
+        "    ],\n" +
+        "    \"status\": \"CREATED\",\n" +
+        "    \"json-path-filter\": \"\$[?(@.xsiType =~ /.*MRScanData/i && @.frames  > 100 && @.scanner-manufacturer =~ /siemens/i && @.scanner-model =~ /TRIOTIM/i )]\"\n" +
+        "    },\n" +
+        "    \"act-as-event-user\": false\n" +
+        "}"
+
+def loggingActionForMRSessionSubscription = "{\n" +
+        "    \"name\": \"MR Scan Archive on ABC123\",\n" +
+        "    \"active\": true,\n" +
+        "    \"action-key\": \"org.nrg.xnat.eventservice.actions.EventServiceLoggingAction:org.nrg.xnat.eventservice.actions.EventServiceLoggingAction\",\n" +
+        "    \"event-filter\": {\n" +
+        "        \"event-type\": \"org.nrg.xnat.eventservice.events.ScanEvent\",\n" +
+        "    \"project-ids\": [\n" +
+        "      \"ABC123\"\n" +
+        "    ],\n" +
+        "    \"status\": \"CREATED\",\n" +
+        "    \"json-path-filter\": \"\$[?(@.xsiType =~ /.*MRScanData/i && @.frames  > 100 && @.scanner-manufacturer =~ /siemens/i && @.scanner-model =~ /TRIOTIM/i )]\"\n" +
+        "    },\n" +
+        "    \"act-as-event-user\": false\n" +
+        "}"
