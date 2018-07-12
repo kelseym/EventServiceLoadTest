@@ -55,5 +55,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy.modules.http-builder:http-builder:0.7.1" level="project" />
   </component>
 </module>
